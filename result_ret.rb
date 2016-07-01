@@ -4,7 +4,7 @@ believe = Watir::Browser.new :firefox ##believe is the name of custom browser, a
 believe.goto "http://117.239.224.139/srmhonline/online/results/onlineResult.jsp" #Apache server
 range.each do |number|
 	believe.text_field(:name => 'txtRegisterno').set number
-believe.button(:name => "Click Me").click
+believe.button(:name => "SUBMIT").click
 believe.screenshot.save "#{number}.png"
 believe.back
 end
